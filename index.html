@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica de Git y GitHub</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="navegacion">
+            <a class="logo" href="#inicio">Git<span>Guía</span></a>
+            <div class="enlaces">
+                <a href="#git">Git</a>
+                <a href="#comandos">Comandos</a>
+                <a href="#github">GitHub</a>
+            </div>
+        </nav>
+        <section class="portada" id="inicio">
+            <p class="etiqueta">GUÍA PARA PRINCIPIANTES</p>
+            <h1>Aprende Git y GitHub<br>paso a paso</h1>
+            <p class="introduccion">Conoce cómo guardar los cambios de un proyecto y compartir tu trabajo en internet.</p>
+            <a class="boton" href="#git">Comenzar guía</a>
+        </section>
+    </header>
+
+    <main class="contenedor">
+        <section class="seccion" id="git">
+            <p class="numero">01 — CONCEPTOS BÁSICOS</p>
+            <h2>¿Qué son Git y GitHub?</h2>
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Git</h3>
+                    <p>Es un sistema de control de versiones. Permite registrar los cambios realizados en los archivos de un proyecto y volver a versiones anteriores cuando sea necesario.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>GitHub</h3>
+                    <p>Es una plataforma en línea donde podemos almacenar repositorios Git, compartir proyectos y colaborar con otras personas.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion" id="instalacion">
+            <p class="numero">02 — PREPARACIÓN</p>
+            <h2>Instalación y configuración</h2>
+            <ol class="pasos">
+                <li>Descarga Git desde <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git-scm.com</a> e instálalo en tu computadora.</li>
+                <li>Abre Git Bash desde el menú de inicio de Windows.</li>
+                <li>Comprueba la instalación con el comando <code>git --version</code>.</li>
+                <li>Configura tu nombre y correo electrónico:</li>
+            </ol>
+            <pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tu_correo@ejemplo.com"</code></pre>
+        </section>
+
+        <section class="seccion" id="comandos">
+            <p class="numero">03 — TRABAJO LOCAL</p>
+            <h2>Comandos básicos de Git</h2>
+            <p class="texto-seccion">Abre Git Bash dentro de la carpeta de tu proyecto y utiliza estos comandos en orden:</p>
+            <div class="tabla-comandos">
+                <div><code>git init</code><span>Inicializa un repositorio Git en la carpeta actual.</span></div>
+                <div><code>git status</code><span>Muestra el estado de los archivos y los cambios.</span></div>
+                <div><code>git add .</code><span>Prepara los cambios para guardarlos en un commit.</span></div>
+                <div><code>git commit -m "Descripción"</code><span>Guarda una versión del proyecto con un mensaje descriptivo.</span></div>
+                <div><code>git log --oneline</code><span>Muestra el historial de commits realizados.</span></div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <p class="numero">04 — HISTORIAL DEL PROYECTO</p>
+            <h2>Ejemplo de tres commits</h2>
+            <p class="texto-seccion">Un commit representa un punto guardado en el historial del proyecto. Para esta práctica se deben realizar tres commits con descripciones claras.</p>
+            <div class="commits">
+                <article><span>COMMIT 1</span><h3>Crear la estructura inicial</h3><code>git add .</code><code>git commit -m "Crear estructura inicial"</code></article>
+                <article><span>COMMIT 2</span><h3>Agregar contenido a la guía</h3><code>git add .</code><code>git commit -m "Agregar contenido de Git"</code></article>
+                <article><span>COMMIT 3</span><h3>Mejorar el diseño de la página</h3><code>git add .</code><code>git commit -m "Mejorar diseño de la guía"</code></article>
+            </div>
+            <p class="nota">Importante: realiza cada commit después de un cambio real en los archivos. No ejecutes los tres commits seguidos sin modificar el proyecto.</p>
+        </section>
+
+        <section class="seccion" id="github">
+            <p class="numero">05 — PUBLICAR EL PROYECTO</p>
+            <h2>Crear un repositorio en GitHub</h2>
+            <ol class="pasos">
+                <li>Entra en <a href="https://github.com/" target="_blank" rel="noopener">github.com</a> e inicia sesión o crea una cuenta.</li>
+                <li>Selecciona <strong>New repository</strong>.</li>
+                <li>Escribe un nombre, por ejemplo <code>U5_GitHub</code>, y selecciona la opción <strong>Public</strong>.</li>
+                <li>Crea el repositorio sin agregar archivos iniciales si tu proyecto local ya está preparado.</li>
+                <li>Conecta tu proyecto local con la dirección de tu repositorio:</li>
+            </ol>
+            <pre><code>git branch -M main
+git remote add origin https://github.com/USUARIO/U5_GitHub.git
+git push -u origin main</code></pre>
+            <p class="nota">Reemplaza USUARIO por tu nombre de usuario de GitHub y utiliza la dirección real de tu repositorio.</p>
+        </section>
+
+        <section class="seccion final">
+            <p class="numero">06 — REPASO</p>
+            <h2>¡Tu proyecto está listo para compartirse!</h2>
+            <p>Antes de entregar, verifica que el repositorio sea público, que contenga los archivos del proyecto y que se puedan ver los tres commits en el historial.</p>
+            <button id="botonConsejo" class="boton">Mostrar consejo</button>
+            <p id="mensajeConsejo" class="mensaje" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Guía básica de Git y GitHub · Práctica U5</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

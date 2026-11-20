@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #202938;
+    background: #f5f7fb;
+    line-height: 1.6;
+}
+
+.encabezado {
+    color: white;
+    background: linear-gradient(135deg, #14213d, #244b78);
+}
+
+.navegacion {
+    max-width: 1100px;
+    margin: auto;
+    padding: 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #77d5c5;
+}
+
+.enlaces {
+    display: flex;
+    gap: 24px;
+}
+
+.enlaces a {
+    color: #e7edf7;
+    text-decoration: none;
+}
+
+.enlaces a:hover {
+    color: #77d5c5;
+}
+
+.portada {
+    max-width: 1100px;
+    margin: auto;
+    padding: 75px 24px 90px;
+}
+
+.etiqueta,
+.numero {
+    color: #168b82;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.portada .etiqueta {
+    color: #77d5c5;
+}
+
+h1 {
+    margin: 15px 0;
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.12;
+}
+
+.introduccion {
+    max-width: 560px;
+    color: #dce6f2;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    border: 0;
+    border-radius: 7px;
+    padding: 12px 20px;
+    background: #77d5c5;
+    color: #14213d;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #a0eadc;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 0 24px;
+}
+
+.seccion {
+    margin-bottom: 28px;
+    padding: 32px;
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(24, 42, 70, 0.04);
+}
+
+h2 {
+    margin: 7px 0 20px;
+    font-size: 28px;
+}
+
+h3 {
+    margin-bottom: 9px;
+    color: #1b4268;
+}
+
+.tarjetas,
+.commits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.tarjeta,
+.commits article {
+    padding: 20px;
+    border-radius: 9px;
+    background: #f1f6fb;
+}
+
+.pasos {
+    padding-left: 22px;
+}
+
+.pasos li {
+    margin: 10px 0;
+}
+
+a {
+    color: #1768a5;
+}
+
+code {
+    color: #125c65;
+    background: #eaf4f4;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    overflow-wrap: anywhere;
+}
+
+pre {
+    margin-top: 15px;
+    padding: 18px;
+    overflow-x: auto;
+    border-radius: 8px;
+    background: #172333;
+    color: #e8f1fb;
+}
+
+pre code {
+    padding: 0;
+    color: #e8f1fb;
+    background: transparent;
+}
+
+.texto-seccion {
+    margin-bottom: 18px;
+}
+
+.tabla-comandos {
+    display: grid;
+    gap: 10px;
+}
+
+.tabla-comandos div {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.8fr) 1.5fr;
+    gap: 15px;
+    padding: 13px;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+.commits {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.commits article span {
+    color: #168b82;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.commits article code {
+    display: block;
+    margin-top: 9px;
+    font-size: 12px;
+}
+
+.nota {
+    margin-top: 17px;
+    padding: 13px;
+    border-left: 4px solid #e4ae4b;
+    background: #fff8e9;
+    font-size: 14px;
+}
+
+.final {
+    text-align: center;
+}
+
+.mensaje {
+    margin-top: 15px;
+    color: #176b61;
+    font-weight: bold;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #dce6f2;
+    background: #14213d;
+}
+
+@media (max-width: 650px) {
+    .navegacion {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .enlaces {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .portada {
+        padding-top: 55px;
+    }
+
+    .seccion {
+        padding: 23px 18px;
+    }
+
+    .tarjetas,
+    .commits {
+        grid-template-columns: 1fr;
+    }
+
+    .tabla-comandos div {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+}
